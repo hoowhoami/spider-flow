@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.spiderflow</groupId>
 	<artifactId>spider-flow</artifactId>
-	<version>0.5.0</version>
+	<version>1.0.0</version>
 	<packaging>pom</packaging>
 	<name>spider-flow</name>
 	<url>https://gitee.com/jmxd/spider-flow</url>
@@ -11,15 +11,16 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.0.7.RELEASE</version>
+		<version>3.2.0-M3</version>
 	</parent>
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<spider-flow.version>${project.version}</spider-flow.version>
 		<alibaba.fastjson.version>1.2.83</alibaba.fastjson.version>
 		<alibaba.druid.version>1.1.16</alibaba.druid.version>
 		<alibaba.transmittable.version>2.11.5</alibaba.transmittable.version>
-		<mybatis.plus.version>3.1.0</mybatis.plus.version>
+		<mybatis.plus.version>3.5.3.2</mybatis.plus.version>
 		<apache.commons.text.verion>1.6</apache.commons.text.verion>
 		<apache.commons.csv.verion>1.8</apache.commons.csv.verion>
 		<commons.io.version>2.7</commons.io.version>
@@ -27,6 +28,12 @@
 		<jsoup.version>1.11.3</jsoup.version>
 		<xsoup.version>0.3.1</xsoup.version>
 	</properties>
+
+	<modules>
+		<module>spider-flow-api</module>
+		<module>spider-flow-core</module>
+		<module>spider-flow-web</module>
+	</modules>
 
 	<dependencies>
 		<!-- spring-boot相关配置 -->
@@ -59,6 +66,7 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.25</version>
 		</dependency>
 		<!-- alibaba相关包 -->
 		<dependency>
@@ -164,9 +172,25 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-	<modules>
-		<module>spider-flow-api</module>
-		<module>spider-flow-core</module>
-		<module>spider-flow-web</module>
-	</modules>
+	<repositories>
+		<repository>
+			<id>spring-snapshots</id>
+			<url>https://repo.spring.io/snapshot</url>
+			<snapshots><enabled>true</enabled></snapshots>
+		</repository>
+		<repository>
+			<id>spring-milestones</id>
+			<url>https://repo.spring.io/milestone</url>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>spring-snapshots</id>
+			<url>https://repo.spring.io/snapshot</url>
+		</pluginRepository>
+		<pluginRepository>
+			<id>spring-milestones</id>
+			<url>https://repo.spring.io/milestone</url>
+		</pluginRepository>
+	</pluginRepositories>
 </project>

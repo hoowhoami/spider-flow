@@ -1,6 +1,7 @@
 package org.spiderflow.core;
 
 import com.alibaba.ttl.TtlRunnable;
+import jakarta.annotation.PostConstruct;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.math.NumberUtils;
 import org.slf4j.Logger;
@@ -24,7 +25,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-import javax.annotation.PostConstruct;
 import java.lang.reflect.Array;
 import java.util.*;
 import java.util.concurrent.ExecutionException;

@@ -1,11 +1,12 @@
 package org.spiderflow.model;
 
 import com.alibaba.fastjson.JSON;
+import jakarta.websocket.Session;
 import org.apache.commons.lang3.time.DateFormatUtils;
 import org.spiderflow.context.SpiderContext;
 import org.spiderflow.core.serializer.FastJsonSerializer;
 
-import javax.websocket.Session;
+import java.io.Serial;
 import java.util.Date;
 
 /**
@@ -15,6 +16,7 @@ import java.util.Date;
  */
 public class SpiderWebSocketContext extends SpiderContext {
 
+    @Serial
     private static final long serialVersionUID = -1205530535069540245L;
 
     private Session session;

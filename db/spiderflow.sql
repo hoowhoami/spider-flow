@@ -65,7 +65,7 @@ CREATE TABLE `sp_function`  (
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
-/* v0.5.0 新增 */
+/* v1.0.0 新增 */
 DROP TABLE IF EXISTS `sp_flow_notice`;
 CREATE TABLE `sp_flow_notice` (
   `id` varchar(32) NOT NULL,
